@@ -1,0 +1,92 @@
+/* ========== TELTH-U MEDPASS — DESIGN TOKENS ========== */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Core Colors */
+  --ink: #0A0E1A;
+  --navy: #0B1D3A;
+  --navy-light: #132B52;
+  --slate: #1A2744;
+  --teal: #00B4A6;
+  --teal-deep: #008F84;
+  --gold: #D4A853;
+  --gold-bright: #F0C060;
+  --ember: #E8625C;
+  --violet: #7B6CC4;
+  --sage: #5DAE6F;
+  --sky: #4AA8D8;
+  --cream: #FAF8F4;
+  --off-white: #F4F6F8;
+  --warm-gray: #F0EDE8;
+  --mid-gray: #9AA0AD;
+  --text: #2D3648;
+  --text-light: #6B7890;
+  --gray-100: #E8ECF0;
+  --gray-500: #6B7A8D;
+  --gray-700: #3A4A5C;
+  --white: #FFFFFF;
+
+  /* Border Radius */
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-xs: 6px;
+
+  /* Shadows */
+  --shadow-soft: 0 2px 20px rgba(10,14,26,0.06);
+  --shadow-med: 0 8px 40px rgba(10,14,26,0.1);
+  --shadow-heavy: 0 20px 60px rgba(10,14,26,0.15);
+
+  /* Transition */
+  --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ========== RESET ========== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Outfit', sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes float-p {
+  0%   { opacity: 0; transform: translateY(100vh); }
+  10%  { opacity: .6; }
+  90%  { opacity: .6; }
+  100% { opacity: 0; transform: translateY(-100px); }
+}
+@keyframes float-card {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,180,166,.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(0,180,166,0); }
+}
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212,168,83,.5); }
+  50%       { box-shadow: 0 0 0 8px rgba(212,168,83,0); }
+}
+
+/* ========== REVEAL ========== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
