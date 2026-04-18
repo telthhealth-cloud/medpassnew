@@ -23,7 +23,7 @@ export const AnnouncementBar: React.FC = () => (
     </span>
     <span>
       Partnerships:{' '}
-      <strong style={{ color: '#D4A853', fontWeight: 600 }}>info@telth-u.com</strong>
+      <strong style={{ color: '#D4A853', fontWeight: 600 }}>info@mytelth.com</strong>
     </span>
   </div>
 );
